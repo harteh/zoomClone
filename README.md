@@ -2,7 +2,7 @@
 NodeJS와 WebRTC, Websockets를 이용한 Zoom 클론코딩  
 <br>
 
-# :blue_heart: 개발환경 설정  
+# :blue_heart: 개발환경  
 :star2: Babel, Nodemon,Express을 활용해서 NodeJS 프로젝트 설정  
 + nodemon: 프로젝트에 변경사항이 있을 때 서버를 재시작 하는 프로그램  
 + babel: 작성한 코드를 일반 Node.js 코드로 컴파일  
@@ -38,5 +38,10 @@ NodeJS와 WebRTC, Websockets를 이용한 Zoom 클론코딩
 
 <br>
 
-# WebSocket을 이용한 실시간 채팅
----  
+# WebSocket을 이용한 실시간 채팅  
+:star2: webSockket은 protocol이며 프로그래밍 언어에 국한되어있지 않다.  
+> **Node.js로 webSocket 서버 만들기**  
+> ws package 이용  
+
+<br>
+
