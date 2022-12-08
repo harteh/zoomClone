@@ -11,3 +11,8 @@ socket.addEventListener("message", (message) => {
 socket.addEventListener("close", () => {
     console.log("Disconnected from Server ❌");
 });
+
+//메시지 보내기까지 10초 기다리기
+setTimeout(() => {
+    socket.send("hello from the browser!");
+}, 10000);
