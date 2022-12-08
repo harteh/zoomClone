@@ -45,3 +45,5 @@ NodeJS와 WebRTC, Websockets를 이용한 Zoom 클론코딩
 
 <br>
 
++ JavaScript object를 string으로 만드는 방법  
+> JSON.stringify(msg)  
