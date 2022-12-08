@@ -20,16 +20,17 @@ function onSocketClose(){
     console.log("Disconnected from the Browser ❌");
 }
 
-function onSocketMessage(message){
-    console.log(message.toString());
-}
+/* function onSocketMessage(message){
+    console.log("Br: " + message.toString());
+} */
 
 //connection이 생기면 socket을 받는다
 wss.on("connection", (socket) => {
     console.log("Connected to Browser ✔");
     socket.on("close", onSocketClose);
-    socket.on("message", onSocketMessage);
-    socket.send("hello!!!");
+    socket.on("message", (message) => {
+        socket.send(message.toString());
+    });
 });
 
 server.listen(3000, handleListen);
