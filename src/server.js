@@ -20,16 +20,18 @@ function onSocketClose(){
     console.log("Disconnected from the Browser ❌");
 }
 
-/* function onSocketMessage(message){
-    console.log("Br: " + message.toString());
-} */
+/**  fake database
+ * 서버에 연결되면 연결된 connection의 socket을 
+ * sockets[] 에 저장한다  */
+const sockets = [];
 
 //connection이 생기면 socket을 받는다
 wss.on("connection", (socket) => {
+    sockets.push(socket);
     console.log("Connected to Browser ✔");
     socket.on("close", onSocketClose);
     socket.on("message", (message) => {
-        socket.send(message.toString());
+        sockets.forEach(aSocket =>  aSocket.send(message.toString()) );
     });
 });
 
