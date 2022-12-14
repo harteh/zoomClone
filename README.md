@@ -47,3 +47,7 @@ NodeJS와 WebRTC, Websockets를 이용한 Zoom 클론코딩
 
 + JavaScript object를 string으로 만드는 방법  
 > JSON.stringify(msg)  
+> websocket은 브라우저에 있는 API이기 때문에 JavaScript object가 아닌 string을 보내야한다  
+>  
+> JSON.parse() : string을 JavaScript object로 변환한다  
+
