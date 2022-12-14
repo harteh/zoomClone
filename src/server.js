@@ -29,14 +29,19 @@ const sockets = [];
 //connection이 생기면 socket을 받는다
 wss.on("connection", (socket) => {
     sockets.push(socket);
+    socket["nickname"] = "Anon";
     console.log("Connected to Browser ✔");
     socket.on("close", onSocketClose);
-    socket.on("message", (message) => {
-        const parsed = JSON.parse(message);
-        if(parsed.type === "new_message") {
-            sockets.forEach(aSocket =>  aSocket.send(parsed.payload) );
-        } else if (parsed.type === "nickname") {
-            console.log(parsed.payload);
+    socket.on("message", (msg) => {
+        const message = JSON.parse(msg);
+        switch (message.type) {
+            case "new_message":
+                sockets.forEach((aSocket) =>
+                    aSocket.send(`${socket.nickname}: ${message.payload}`) );
+                    break
+            case "nickname":
+                socket["nickname"] = message.payload;
+                break
         }
     });
 });
