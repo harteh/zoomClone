@@ -51,3 +51,8 @@ NodeJS와 WebRTC, Websockets를 이용한 Zoom 클론코딩
 >  
 > JSON.parse() : string을 JavaScript object로 변환한다  
 
+<br>
+
+# SocketIO  
+:star2: 실시간, 양방향, event 기반의 통신을 가능하게하는 프레임워크  
+socketIO는 websocket을 이용하며, websocket을 지원하지 않으면 다른방법을 사용하여 실시간 기능을 제공한다(e.g HTTP long polling)  
