@@ -16,12 +16,18 @@ const httpServer = http.createServer(app);  // http 서버
 const wsServer = new Server(httpServer);
 
 wsServer.on("connection", (socket) => {
-    socket.on("enter_room", (msg, done) => {
-        console.log(msg);
-        setTimeout(() => {
-            done();
-        }, 10000);
-    } );
+    socket.onAny((event) => {
+        console.log(`Socket Event:${event}`);
+    });
+
+    socket.on("enter_room", (roomName, done) => {
+        console.log(socket.rooms);
+        socket.join(roomName);
+        console.log(socket.rooms);
+        setTimeout(()=>{
+            done("hello from the backend");
+        }, 3000)
+    });
 });
 
 /**  fake database
