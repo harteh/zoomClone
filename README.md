@@ -62,3 +62,12 @@ socketIO는 websocket을 이용하며, websocket을 지원하지 않으면 다�
 <br>  
 
 + socket.join
+<br>
+
+# Video call  
+:tv: 사용자 카메라(비디오) 가져와 출력  
+:white_check_mark: 버튼 제작 : 마이크 음소거 설정, 카메라 조작 버튼  
+<br>
+
+## video  
++ navigator.mediaDevices API 사용  
