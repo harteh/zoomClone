@@ -1,6 +1,8 @@
 # Noom  
 NodeJS와 WebRTC, Websockets를 이용한 Zoom 클론코딩  
 <br>
+- socketIO 이용한 채팅 서비스 구현: socketXXX 파일  
+- video call 서비스 구현: server.js | app.js | home.pug  
 
 # :blue_heart: 개발환경  
 :star2: Babel, Nodemon,Express을 활용해서 NodeJS 프로젝트 설정  
